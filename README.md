@@ -83,6 +83,11 @@ aws s3 ls s3://<bucket-name>
 ```
 **Description:** Lists objects in a specific S3 bucket.
 
+```bash
+aws s3 ls s3://<bucket-name> --recursive
+```
+**Description:** Lists objects in a specific S3 bucket.
+
 ### Upload File to S3
 ```bash
 aws s3 cp <local-file> s3://<bucket-name>/<key>
