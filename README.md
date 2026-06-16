@@ -190,6 +190,26 @@ aws lambda list-functions --query "Functions[].FunctionName"
 ]
 ```
 
+### Get Lambda Function 
+
+```bash
+
+aws lambda get-function \
+  --function-name student92-hello-world-lambda \
+  --query 'Configuration.[FunctionName, Runtime, MemorySize, Timeout]' \
+  --output table
+
+----------------------------------
+|           GetFunction          |
++--------------------------------+
+|  student92-hello-world-lambda  |
+|  python3.12                    |
+|  128                           |
+|  30                            |
++--------------------------------+
+
+```
+
 ### Invoke Function
 ```bash
 aws lambda invoke --function-name <function-name> response.json
