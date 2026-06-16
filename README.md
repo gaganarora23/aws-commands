@@ -100,6 +100,13 @@ aws s3 cp s3://<bucket-name>/<key> <local-file>
 ```
 **Description:** Downloads a file from S3 bucket to local machine.
 
+### Read File from S3
+```bash
+aws s3 cp s3://<bucket-name>/<key> -
+```
+**Description:** Read a file from S3 bucket without downloading to local machine.
+
+
 ---
 
 ## IAM
