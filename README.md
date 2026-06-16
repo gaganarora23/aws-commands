@@ -179,6 +179,17 @@ aws lambda list-functions
 ```
 **Description:** Lists all Lambda functions in the current region.
 
+### List Lambda Functions and list their names.
+
+```bash
+aws lambda list-functions --query "Functions[].FunctionName"                                                                                                                                                                                                  
+[
+    "student92-populate-bucket-lambda",
+    "student92-hello-world-lambda",
+    "student92-empty-bucket-lambda"
+]
+```
+
 ### Invoke Function
 ```bash
 aws lambda invoke --function-name <function-name> response.json
