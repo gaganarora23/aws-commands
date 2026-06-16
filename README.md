@@ -276,6 +276,20 @@ aws logs describe-log-groups
 ```
 **Description:** Lists all CloudWatch log groups.
 
+### List Logs  since 20m
+```bash
+aws logs tail /aws/lambda/student92-hello-world-lambda --since 20m 
+```
+
+### List Logs with Filter
+
+```bash
+aws logs filter-log-events \
+  --log-group-name /aws/lambda/student92-hello-world-lambda \
+  --filter-pattern "Function invoked"
+
+```
+
 ---
 
 ## Tips
