@@ -290,7 +290,7 @@ aws logs filter-log-events \
 
 ```
 # Get Lambda invocation metrics
-# The field "Sum" will reflect number of times this function has been invoked 
+**The field "Sum" will reflect number of times this function has been invoked**
 aws cloudwatch get-metric-statistics \
   --namespace AWS/Lambda \
   --metric-name Invocations \
@@ -302,7 +302,7 @@ aws cloudwatch get-metric-statistics \
 
 
 # Get Lambda error metrics
-# The field "Sum" will reflect number of times this function had errors (hopefully zero!)
+**The field "Sum" will reflect number of times this function had errors (hopefully zero!)**
 aws cloudwatch get-metric-statistics \
   --namespace AWS/Lambda \
   --metric-name Errors \
