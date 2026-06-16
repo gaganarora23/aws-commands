@@ -289,6 +289,29 @@ aws logs filter-log-events \
   --filter-pattern "Function invoked"
 
 ```
+# Get Lambda invocation metrics
+# The field "Sum" will reflect number of times this function has been invoked 
+aws cloudwatch get-metric-statistics \
+  --namespace AWS/Lambda \
+  --metric-name Invocations \
+  --dimensions Name=FunctionName,Value=student92-hello-world-lambda \
+  --start-time $(date -u -d '1 hour ago' +%Y-%m-%dT%H:%M:%SZ) \
+  --end-time $(date -u +%Y-%m-%dT%H:%M:%SZ) \
+  --period 300 \
+  --statistics Sum
+
+
+# Get Lambda error metrics
+# The field "Sum" will reflect number of times this function had errors (hopefully zero!)
+aws cloudwatch get-metric-statistics \
+  --namespace AWS/Lambda \
+  --metric-name Errors \
+  --dimensions Name=FunctionName,Value=student92-hello-world-lambda \
+  --start-time $(date -u -d '1 hour ago' +%Y-%m-%dT%H:%M:%SZ) \
+  --end-time $(date -u +%Y-%m-%dT%H:%M:%SZ) \
+  --period 300 \
+  --statistics Sum
+
 
 ---
 
