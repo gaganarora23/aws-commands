@@ -220,10 +220,9 @@ aws lambda invoke --function-name student92-hello-world-lambda output.json
     "ExecutedVersion": "$LATEST"
 }
 ```
+~ $ cat output.json
 
 ```json
-
-~ $ cat output.json
 {"statusCode": 200, "message": "Hello from AWS Lambda!", "timestamp": "2025-06-16T20:59:34.606560", "function_name": "student92-hello-world-lambda", "event_received": {}, "tips": ["You successfully invoked this Lambda function using AWS CLI!", "Check CloudWatch Logs to see the function execution logs next"]}
 ```
 
