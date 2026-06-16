@@ -31,6 +31,14 @@ aws sts get-caller-identity
 ```
 **Description:** Displays the AWS account ID, user ID, and ARN of the currently authenticated AWS principal. Helps verify which AWS account and credentials are active.
 
+**Response**
+
+{
+    "UserId": "ABCAVC:ConsoleSession",
+    "Account": "5959625",
+    "Arn": "arn:aws:sts::5959625:assumed-role/ConsoleAccessRoleEDA/ConsoleSession"
+}
+
 ---
 
 ## EC2
