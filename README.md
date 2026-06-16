@@ -33,11 +33,13 @@ aws sts get-caller-identity
 
 **Response**
 
+```json
 {
     "UserId": "ABCAVC:ConsoleSession",
     "Account": "5959625",
     "Arn": "arn:aws:sts::5959625:assumed-role/ConsoleAccessRoleEDA/ConsoleSession"
 }
+```
 
 ---
 
